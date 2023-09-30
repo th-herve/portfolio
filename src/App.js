@@ -1,14 +1,18 @@
 import Navbar from './components/navbar';
 import About from './components/about';
+import React, { useEffect } from 'react';
 
 const fullName = 'Thibault Hervé';
 const jobTitle = 'Développeur Junior';
 const introText =
-  "Je suis un développeur junior en quête d'un stage, animé par une passion dévorante pour le développement informatique. Je maîtrise déjà plusieurs technologies, prêt à mettre en pratique mes compétences pour enrichir votre équipe.";
+  "Je suis un développeur junior en quête d'un stage, animé par une passion pour le développement informatique. Je maîtrise déjà plusieurs technologies, et je suis prêt à mettre en pratique mes compétences pour enrichir votre équipe.";
 
 const aboutPage = <About fullName={fullName} jobTitle={jobTitle} description={introText} />;
 
 export default function App() {
+  useEffect(() => {
+    document.title = 'Portfolio';
+  }, []);
   return (
     <main
       className="h-screen 
