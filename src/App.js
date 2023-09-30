@@ -1,5 +1,5 @@
 import Navbar from './components/navbar';
-import Technologies from './components/technologies';
+import Skill from './components/skill';
 import About from './components/about';
 import React, { useEffect } from 'react';
 
@@ -19,7 +19,7 @@ export default function App() {
         <About fullName={fullName} jobTitle={jobTitle} description={introText} />
       </section>
       <section className="technologies ">
-        <Technologies />
+        <Skill />
       </section>
     </main>
   );
