@@ -5,7 +5,7 @@ export default function About({ fullName, jobTitle, description }) {
       className="flex 
                  w-screen 
                  justify-center 
-                 bg-[#0B0c10] 
+                 bg-dark
                  p-40"
     >
       <div className=" text-6xl font-bold text-white">
