@@ -1,7 +1,17 @@
+import Navbar from './components/navbar';
+import About from './components/about';
+
 export default function App() {
   return (
-    <>
-      <h1 className="m-4 flex basis-4 border-black bg-sky-700 p-3 text-3xl font-bold underline">hello world</h1>
-    </>
+    <main className="h-screen">
+      <Navbar />
+      <About />
+    </main>
   );
 }
+
+// <Navbar />
+// <About />
+// <Technologie />
+// <Project />
+// <Contact />
