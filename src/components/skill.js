@@ -1,14 +1,21 @@
-import { FaReact } from 'react-icons/fa6';
+import { FaReact, FaHtml5 } from 'react-icons/fa6';
+
+const iconComponent = [FaReact, FaHtml5];
 
 export default function Skill() {
+  const iconSize = 50;
   return (
     <div
       className="
-                    bg-[url('https://images.unsplash.com/photo-1448067686092-1f4f2070baae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] 
+                    bg-dark
                     p-8 text-cyan"
     >
-      <div className="rounded-md bg-black p-3">
-        <FaReact size={100} />
+      <div className="flex rounded-md bg-black p-3">
+        {iconComponent.map((IconC, index) => (
+          <div className="rounded-md bg-gray p-2" key={'icon' + index}>
+            <IconC size={iconSize} />
+          </div>
+        ))}
       </div>
     </div>
   );
