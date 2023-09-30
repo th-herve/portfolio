@@ -24,3 +24,5 @@ yarn-error.log*
 
 # generated styles
 tailwind.css
+
+note.md
