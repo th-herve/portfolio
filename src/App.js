@@ -13,7 +13,7 @@ export default function App() {
     document.title = 'Portfolio';
   }, []);
   return (
-    <>
+    <div className="bg-dark">
       <Navbar />
       <main className="flex flex-col items-center">
         <section className="about overflow-hidden">
@@ -23,7 +23,7 @@ export default function App() {
           <Skill />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
