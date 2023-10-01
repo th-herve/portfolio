@@ -6,29 +6,38 @@ import { useState } from 'react';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const linksClassName = function returnLinksCassName() {
+    let className = 'absolute top-12 w-screen p-8 text-center text-2xl text-white backdrop-blur-xl';
+    if (!isNavOpen) {
+      className += ' hidden';
+    }
+
+    return className;
+  };
   const links = ['Home', 'Projects', 'Cv', 'Technologie', 'Contact'];
+
+  // note: there is a margin right apply on the right div in mobile mode, because if using anything other than justify-center on the navbar, the blur break on the right
   return (
     <>
-      <nav className="flex items-center justify-between  bg-black p-3 text-2xl text-white">
-        <div className="flex items-center gap-3 text-2xl font-bold">
+      <nav className="sticky top-0 flex items-center justify-around  bg-black p-3 text-2xl text-white">
+        <div className="mr-96 flex items-center gap-3 text-2xl font-bold">
           <button onClick={() => setIsNavOpen(!isNavOpen)} className="text-cyan">
-            {isNavOpen ? <GiHamburgerMenu size={30} /> : <FaXmark size={30} />}
+            {isNavOpen ? <FaXmark size={30} /> : <GiHamburgerMenu size={30} />}
           </button>
           <FaCode size={30} className="text-cyan" />
-          <h1 className="hidden md:block">Portfolio</h1>
         </div>
+        <h1 className="hidden md:block">Portfolio</h1>
         <div className="">Language</div>
-      </nav>
 
-      <div className={isNavOpen ? 'hidden' : ''}>
-        <ul className="absolute top-12 w-screen p-8 text-center text-2xl text-white backdrop-blur-xl">
+        <ul className={linksClassName()}>
           {links.map((link, index) => (
             <li key={link + index} className="mb-12">
               <Link text={link} />
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
     </>
   );
 }
