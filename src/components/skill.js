@@ -2,7 +2,7 @@ import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaPhp, FaSquareJs, FaPython, FaGit
 import { SiGnubash, SiWebpack, SiJest, SiAdobephotoshop, SiAdobeindesign } from 'react-icons/si';
 import { PiFileSqlDuotone } from 'react-icons/pi';
 
-const iconComponent = [
+const iconComponents = [
   FaReact,
   FaHtml5,
   FaCss3Alt,
@@ -22,12 +22,12 @@ const iconComponent = [
 
 export default function Skill() {
   return (
-    <div className="flex w-screen bg-dark p-8 text-cyan">
-      <div className="grid grid-cols-5 gap-3 rounded-md bg-black p-3">
-        {iconComponent.map((IconC, index) => (
-          <div className="flex" key={index}>
-            <div className="rounded-md bg-gray p-2" key={'icon' + index}>
-              <IconC size={100} />
+    <div className="flex w-screen justify-center bg-dark p-8 text-cyan">
+      <div className="grid w-[80%] grid-cols-5 place-items-center gap-9 rounded-md bg-black p-20">
+        {iconComponents.map((IconC, index) => (
+          <div className="flex" key={'icon' + index}>
+            <div className="rounded-md bg-gray p-2">
+              <IconC size="5em" />
             </div>
           </div>
         ))}
