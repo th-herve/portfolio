@@ -22,12 +22,14 @@ const iconComponents = [
 
 export default function Skill() {
   return (
-    <div className="flex w-screen justify-center bg-dark p-8 text-cyan">
-      <div className="grid w-[80%] grid-cols-5 place-items-center gap-9 rounded-md bg-black p-20">
+    <div className="mb-12 flex w-screen justify-center bg-dark text-cyan">
+      <div className="mb-12 grid w-[85%] grid-cols-5 place-items-center gap-6 rounded-md bg-black p-3">
+        <h2 className="col-span-1 text-4xl font-bold">Skill</h2>
+        <div className="col-span-4"></div>
         {iconComponents.map((IconC, index) => (
           <div className="flex" key={'icon' + index}>
             <div className="rounded-md bg-gray p-2">
-              <IconC size="5em" />
+              <IconC size="4rem" />
             </div>
           </div>
         ))}
