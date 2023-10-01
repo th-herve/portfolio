@@ -13,15 +13,17 @@ export default function App() {
     document.title = 'Portfolio';
   }, []);
   return (
-    <main>
+    <>
       <Navbar />
-      <section className="about overflow-hidden">
-        <About fullName={fullName} jobTitle={jobTitle} description={introText} />
-      </section>
-      <section className="technologies ">
-        <Skill />
-      </section>
-    </main>
+      <main className="flex flex-col items-center">
+        <section className="about overflow-hidden">
+          <About fullName={fullName} jobTitle={jobTitle} description={introText} />
+        </section>
+        <section className="technologies ">
+          <Skill />
+        </section>
+      </main>
+    </>
   );
 }
 
