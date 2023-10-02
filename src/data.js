@@ -20,6 +20,11 @@ export const skills = (() => {
 
   const skillsList = [
     {
+      name: 'HTML5',
+      category: categories.language,
+      icon: FaHtml5,
+    },
+    {
       name: 'Bootstrap',
       category: categories.framework,
       icon: SiBootstrap,
@@ -38,11 +43,6 @@ export const skills = (() => {
       name: 'React',
       category: categories.framework,
       icon: FaReact,
-    },
-    {
-      name: 'HTML5',
-      category: categories.language,
-      icon: FaHtml5,
     },
     {
       name: 'CSS3',
