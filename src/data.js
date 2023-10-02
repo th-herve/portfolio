@@ -1,5 +1,14 @@
 import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaPhp, FaSquareJs, FaPython, FaGitAlt, FaLinux } from 'react-icons/fa6';
-import { SiGnubash, SiWebpack, SiJest, SiAdobephotoshop, SiAdobeindesign } from 'react-icons/si';
+import {
+  SiGnubash,
+  SiWebpack,
+  SiJest,
+  SiAdobephotoshop,
+  SiAdobeindesign,
+  SiFlask,
+  SiTailwindcss,
+  SiBootstrap,
+} from 'react-icons/si';
 import { PiFileSqlDuotone } from 'react-icons/pi';
 
 export const skills = (() => {
@@ -10,6 +19,21 @@ export const skills = (() => {
   };
 
   const skillsList = [
+    {
+      name: 'Bootstrap',
+      category: categories.framework,
+      icon: SiBootstrap,
+    },
+    {
+      name: 'Tailwind',
+      category: categories.framework,
+      icon: SiTailwindcss,
+    },
+    {
+      name: 'Flask',
+      category: categories.framework,
+      icon: SiFlask,
+    },
     {
       name: 'React',
       category: categories.framework,
