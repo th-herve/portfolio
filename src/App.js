@@ -23,7 +23,7 @@ export default function App() {
         <section id="skills">
           <Skill />
         </section>
-        <section id="contact" className="mb-96 bg-black">
+        <section id="contact" className="mb-96 w-screen bg-gradient-to-r from-black to-gray">
           <Contact />
         </section>
       </main>
