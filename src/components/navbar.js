@@ -22,9 +22,7 @@ export default function Navbar() {
 
         <ul
           className={`${!isNavOpen ? 'hidden' : ''}
-<<<<<<< HEAD
             absolute right-0 top-20 w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:justify-center`}>
-          =======
           {links.map((link, index) => (
             <li key={link + index} className="mb-12 mt-12 md:my-0">
               <Link text={link} href={'#' + link.toLowerCase()} />
