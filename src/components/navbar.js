@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const links = ['Home', 'Projects', 'Cv', 'Technologie', 'Contact'];
+  const links = ['Home', 'Projects', 'Cv', 'Skills', 'Contact'];
 
   return (
     <>
@@ -22,8 +22,7 @@ export default function Navbar() {
 
         <ul
           className={`${!isNavOpen ? 'hidden' : ''}
-            absolute right-0 top-20 w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:justify-center`}
-        >
+            absolute right-0 top-20 w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:justify-center`}>
           {links.map((link, index) => (
             <li key={link + index} className="mb-12 md:mb-0">
               <Link text={link} />
