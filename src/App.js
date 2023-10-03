@@ -1,6 +1,7 @@
 import Navbar from './components/navbar';
 import Skill from './components/skill';
 import About from './components/about';
+import Contact from './components/contact';
 import React, { useEffect } from 'react';
 
 const fullName = 'Thibault Hervé';
@@ -16,11 +17,14 @@ export default function App() {
     <div className="bg-dark">
       <Navbar />
       <main className="flex flex-col items-center">
-        <section className="about overflow-hidden">
+        <section id="home">
           <About fullName={fullName} jobTitle={jobTitle} description={introText} />
         </section>
-        <section className="technologies ">
+        <section id="skills">
           <Skill />
+        </section>
+        <section id="contact" className="mb-96 w-screen bg-gradient-to-r from-black to-gray">
+          <Contact />
         </section>
       </main>
     </div>
