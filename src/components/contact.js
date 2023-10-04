@@ -22,10 +22,14 @@ export default function Contact() {
           id="message"
           name="message"
           rows="10"
-          className="h-20 w-[100%] rounded-md bg-white p-3 font-bold placeholder:text-lightGray focus:border-2 focus:border-cyan focus:outline-none focus:placeholder:text-white"></textarea>
+          className="h-20 w-[100%] rounded-md bg-white p-3 font-bold placeholder:text-lightGray focus:border-2 focus:border-cyan focus:outline-none focus:placeholder:text-white"
+        ></textarea>
 
         <div className="m-3 flex justify-center">
-          <button className="rounded-md border-2 border-cyan bg-black px-5 py-3 text-cyan" type="submit">
+          <button
+            className="rounded-md border-2 border-cyan bg-black px-9 py-3 font-bold text-cyan transition ease-in-out hover:shadow-md hover:shadow-cyan hover:transition-all "
+            type="submit"
+          >
             Send
           </button>
         </div>
