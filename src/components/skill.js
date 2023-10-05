@@ -7,7 +7,7 @@ export default function Skill() {
         <div className="flex flex-col items-center">
           <div>
             <div className="mb-10 border-b-2 border-solid border-cyan">
-              <h2 className="text-4xl font-bold">Skill</h2>
+              <h2 className="text-4xl font-bold">Skills</h2>
             </div>
             {Object.keys(skills).map((category) => (
               <div key={category} className="mb-10">
