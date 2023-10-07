@@ -1,4 +1,5 @@
 import { skills } from '../data/data_skills';
+import Title from './utils/title';
 
 export default function Skill() {
   return (
@@ -6,9 +7,7 @@ export default function Skill() {
       <div className="mb-12 w-[85%] rounded-md bg-black p-3 lg:w-[70%]">
         <div className="flex flex-col items-center">
           <div>
-            <div className="mb-10 border-b-2 border-solid border-cyan">
-              <h2 className="text-4xl font-bold">Skills</h2>
-            </div>
+            <Title titleText="Skills" />
             {Object.keys(skills).map((category) => (
               <div key={category} className="mb-10">
                 <h3 className="text-2xl">{category}</h3>

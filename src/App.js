@@ -2,6 +2,7 @@ import Navbar from './components/navbar';
 import Skill from './components/skill';
 import About from './components/about';
 import Contact from './components/contact';
+import Projects from './components/projects';
 import React, { useEffect } from 'react';
 
 const fullName = 'Thibault Hervé';
@@ -16,9 +17,12 @@ export default function App() {
   return (
     <div className="bg-dark">
       <Navbar />
-      <main className="flex flex-col items-center">
+      <main className="items-centern flex flex-col">
         <section id="home" className="flex justify-center">
           <About fullName={fullName} jobTitle={jobTitle} description={introText} />
+        </section>
+        <section id="project" className="mb-10">
+          <Projects />
         </section>
         <section id="skills">
           <Skill />

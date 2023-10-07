@@ -1,4 +1,5 @@
 import Input from './utils/textInput';
+import Title from './utils/title';
 
 // TODO Have the form and textarea be their own components
 
@@ -6,7 +7,7 @@ export default function Contact() {
   return (
     <div className="mb-96 flex w-screen justify-center bg-gradient-to-r from-black to-gray">
       <form action="" method="" className="p-5  ">
-        <h2 className="text-4xl font-bold text-cyan">Contact</h2>
+        <Title titleText="Contact" />
         <div className="mb-10">
           <div className="flex gap-3">
             <div>
