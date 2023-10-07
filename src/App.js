@@ -17,11 +17,11 @@ export default function App() {
   return (
     <div className="bg-dark">
       <Navbar />
-      <main className="items-centern flex flex-col">
+      <main className="flex flex-col items-center">
         <section id="home" className="flex justify-center">
           <About fullName={fullName} jobTitle={jobTitle} description={introText} />
         </section>
-        <section id="project" className="mb-10">
+        <section id="project" className="mb-10 w-screen bg-gray lg:h-[calc(100vh-2rem)]">
           <Projects />
         </section>
         <section id="skills">
