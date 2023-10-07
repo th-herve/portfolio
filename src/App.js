@@ -17,7 +17,7 @@ export default function App() {
     <div className="bg-dark">
       <Navbar />
       <main className="flex flex-col items-center">
-        <section id="home">
+        <section id="home" className="flex justify-center">
           <About fullName={fullName} jobTitle={jobTitle} description={introText} />
         </section>
         <section id="skills">
