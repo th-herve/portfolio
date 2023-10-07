@@ -1,5 +1,6 @@
 import { projects } from '../data/data_projects';
 import Title from './utils/title';
+import GithubLink from './utils/github_link';
 
 export default function Projects() {
   return (
@@ -14,7 +15,10 @@ export default function Projects() {
               <div key={projectIndex} className="mx-10 my-5 flex snap-center flex-col items-center">
                 <h1 className="text-2xl">{project.title}</h1>
                 <img className="max-w-xs rounded-md sm:max-w-md" src={project.image} alt={project.title} />
-                <p className="text-center">{project.description}</p>
+                <div className="mt-2 flex items-center">
+                  <p className="text-start">{project.description}</p>
+                  <GithubLink href="#" />
+                </div>
               </div>
             ))}
           </div>

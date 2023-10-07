@@ -6,6 +6,7 @@ export const projects = [
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
     link: '',
+    githubLink: '',
   },
   {
     title: 'my project',
@@ -14,6 +15,7 @@ export const projects = [
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
     link: '',
+    githubLink: '',
   },
   {
     title: 'my project',
@@ -22,5 +24,6 @@ export const projects = [
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
     link: '',
+    githubLink: '',
   },
 ];
