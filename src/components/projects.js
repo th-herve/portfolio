@@ -14,7 +14,11 @@ export default function Projects() {
             {projects.map((project, projectIndex) => (
               <div key={projectIndex} className="mx-10 my-5 flex snap-center flex-col items-center">
                 <h1 className="text-2xl">{project.title}</h1>
-                <img className="max-w-xs rounded-md sm:max-w-md" src={project.image} alt={project.title} />
+                <img
+                  className="max-w-xs rounded-md shadow-md shadow-dark sm:max-w-md"
+                  src={project.image}
+                  alt={project.title}
+                />
                 <div className="mt-2 flex items-center">
                   <p className="text-start">{project.description}</p>
                   <GithubLink href="#" />
