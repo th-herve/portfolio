@@ -1,4 +1,4 @@
-import { skills } from '../data';
+import { skills } from '../data/data_skills';
 
 export default function Skill() {
   return (
@@ -29,12 +29,3 @@ export default function Skill() {
     </div>
   );
 }
-
-// <div className="mb-12 grid w-[85%] grid-cols-5 place-items-center gap-6 rounded-md bg-black p-3">
-// {iconComponents.map((IconC, index) => (
-//   <div className="flex" key={'icon' + index}>
-//     <div className="rounded-md bg-gray p-2">
-//       <IconC size="4rem" />
-//     </div>
-//   </div>
-// ))}
