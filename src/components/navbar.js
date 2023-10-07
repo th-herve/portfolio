@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 flex items-center justify-between bg-black  px-8 py-6 text-2xl text-white">
+      <nav className="sticky top-0 flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
         <div className="flex items-center gap-3 text-2xl font-bold ">
           <button onClick={() => setIsNavOpen(!isNavOpen)} className="text-cyan md:hidden">
             {isNavOpen ? <FaXmark size="2rem" /> : <GiHamburgerMenu size="2rem" />}
@@ -22,7 +22,8 @@ export default function Navbar() {
 
         <ul
           className={`${!isNavOpen ? 'hidden' : ''}
-            absolute right-0 top-20 w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:justify-center`}>
+            absolute right-0 top-14 w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:justify-center`}
+        >
           {links.map((link, index) => (
             <li key={link + index} className="mb-12 mt-12 md:my-0">
               <Link text={link} href={'#' + link.toLowerCase()} />
