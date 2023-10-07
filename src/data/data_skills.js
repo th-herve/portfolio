@@ -8,6 +8,7 @@ import {
   SiFlask,
   SiTailwindcss,
   SiBootstrap,
+  SiC,
 } from 'react-icons/si';
 import { PiFileSqlDuotone } from 'react-icons/pi';
 
@@ -23,6 +24,11 @@ export const skills = (() => {
       name: 'HTML5',
       category: categories.language,
       icon: FaHtml5,
+    },
+    {
+      name: 'C',
+      category: categories.language,
+      icon: SiC,
     },
     {
       name: 'Bootstrap',
