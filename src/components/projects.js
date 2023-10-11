@@ -10,7 +10,7 @@ export default function Projects() {
       </div>
       <div className="lg:flex lg:h-screen lg:items-center lg:justify-center">
         <div className="lg:flex lg:h-[800px] lg:justify-center lg:overflow-y-hidden">
-          <ul id="titleList" className="hidden text-2xl text-white lg:block">
+          <ul id="titlesList" className="hidden text-2xl text-white lg:flex lg:flex-col lg:justify-center">
             {projects.map((project, projectIndex) => (
               <li key={'li' + projectIndex}>{project.title}</li>
             ))}
