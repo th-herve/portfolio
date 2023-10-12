@@ -1,6 +1,7 @@
 import { projects } from '../data/data_projects';
 import Title from './utils/title';
 import GithubLink from './utils/github_link';
+import LiBig from './utils/liBig';
 
 export default function Projects() {
   return (
@@ -12,7 +13,7 @@ export default function Projects() {
         <div id="ul-projects-container" className="lg:flex lg:h-[800px] lg:justify-center lg:overflow-y-hidden">
           <ul id="titlesList" className="hidden text-2xl text-white lg:flex lg:flex-col lg:justify-center">
             {projects.map((project, projectIndex) => (
-              <li key={'li' + projectIndex}>{project.title}</li>
+              <LiBig key={'li' + projectIndex} text={project.title} />
             ))}
           </ul>
 
