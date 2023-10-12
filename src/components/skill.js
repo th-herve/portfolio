@@ -12,8 +12,8 @@ export default function Skill() {
               <div key={category} className="mb-10">
                 <h3 className="text-2xl">{category}</h3>
                 <div className="flex flex-wrap gap-3 lg:gap-10">
-                  {skills[category].map((skill) => (
-                    <div key={'icon' + skill}>
+                  {skills[category].map((skill, index) => (
+                    <div key={'icon' + index}>
                       <div className="rounded-md bg-gray p-2">
                         <skill.icon size="4rem" />
                       </div>
