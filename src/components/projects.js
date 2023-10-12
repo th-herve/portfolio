@@ -9,9 +9,12 @@ export default function Projects() {
       <div className="px-20">
         <Title titleText="My projects" mb="0" />
       </div>
-      <div className="lg:flex lg:h-screen lg:items-center lg:justify-center">
-        <div id="ul-projects-container" className="lg:flex lg:h-[800px] lg:justify-center lg:overflow-y-hidden">
-          <ul id="titlesList" className="hidden text-2xl text-white lg:flex lg:flex-col lg:justify-center">
+      <div id="flex-wraper-lg" className="lg:ml-[10%] lg:flex lg:h-screen lg:items-center lg:justify-items-start">
+        <div
+          id="ul-projects-container"
+          className="lg:flex lg:h-[800px] lg:justify-center lg:gap-28 lg:overflow-y-hidden"
+        >
+          <ul id="titlesList" className="hidden pt-6 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
               <LiBig key={'li' + projectIndex} text={project.title} />
             ))}
