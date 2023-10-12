@@ -21,7 +21,7 @@ export default function App() {
         <section id="home" className="flex justify-center">
           <About fullName={fullName} jobTitle={jobTitle} description={introText} />
         </section>
-        <section id="project" className="mb-10 w-screen bg-gray lg:h-[calc(100vh-2rem)]">
+        <section id="projects" className="mb-10 w-screen bg-gray lg:h-[calc(100vh-2rem)]">
           <Projects />
         </section>
         <section id="skills">
