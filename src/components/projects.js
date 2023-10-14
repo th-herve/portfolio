@@ -3,7 +3,10 @@ import Title from './utils/title';
 import GithubLink from './utils/github_link';
 import LiBig from './utils/liBig';
 
+import { useState } from 'react';
+
 export default function Projects() {
+  const [imageIndex, setImageIndex] = useState(0);
   return (
     <div className="overflow-x-hidden py-5">
       <div className="px-20">
@@ -16,8 +19,16 @@ export default function Projects() {
         >
           <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
-              <a href={'#single-project-container-' + projectIndex} key={'project-link-' + projectIndex}>
-                <LiBig key={'li' + projectIndex} text={project.title} />
+              <a
+                href={'#single-project-container-' + projectIndex}
+                key={'project-link-' + projectIndex}
+                onClick={() => setImageIndex(projectIndex)}
+              >
+                <LiBig
+                  key={'li' + projectIndex}
+                  text={project.title}
+                  selected={projectIndex == imageIndex ? true : false}
+                />
               </a>
             ))}
           </ul>
