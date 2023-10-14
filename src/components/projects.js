@@ -14,7 +14,7 @@ export default function Projects() {
           id="ul-projects-container"
           className="lg:flex lg:h-[800px] lg:justify-center lg:gap-28 lg:overflow-y-hidden"
         >
-          <ul id="titlesList" className="hidden pt-6 text-2xl text-white lg:flex lg:flex-col">
+          <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
               <LiBig key={'li' + projectIndex} text={project.title} />
             ))}
@@ -22,7 +22,7 @@ export default function Projects() {
 
           <div
             id="all-projects-container"
-            className="flex snap-x snap-mandatory overflow-x-auto text-white "
+            className="flex snap-x snap-mandatory overflow-x-auto text-white lg:snap-y "
             style={{ scrollbarWidth: 'none' }}
           >
             <div className="flex px-[20%] lg:block lg:px-8">
@@ -30,7 +30,7 @@ export default function Projects() {
                 <div
                   id="single-project-container"
                   key={'div' + projectIndex}
-                  className="mx-10 my-5 flex min-w-[300px] snap-center flex-col items-center sm:min-w-[400px] lg:my-40" // gap between de image and on last
+                  className="mx-10 my-5 flex min-w-[300px] snap-center flex-col items-center sm:min-w-[400px] lg:my-40 lg:snap-start lg:last:mb-80" // gap between desktop images and on last
                 >
                   <h1 className="text-2xl lg:hidden">{project.title}</h1>
                   <div id="imageContainer" className="h-[200px] sm:h-[300px] lg:min-h-[500px]">
