@@ -16,20 +16,22 @@ export default function Projects() {
         >
           <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
-              <LiBig key={'li' + projectIndex} text={project.title} />
+              <a href={'#single-project-container-' + projectIndex} key={'project-link-' + projectIndex}>
+                <LiBig key={'li' + projectIndex} text={project.title} />
+              </a>
             ))}
           </ul>
 
           <div
             id="all-projects-container"
-            className="flex snap-x snap-mandatory overflow-x-auto text-white lg:snap-y "
+            className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth text-white lg:snap-y "
             style={{ scrollbarWidth: 'none' }}
           >
             <div className="flex px-[20%] lg:block lg:px-8">
               {projects.map((project, projectIndex) => (
                 <div
-                  id="single-project-container"
-                  key={'div' + projectIndex}
+                  id={'single-project-container-' + projectIndex}
+                  key={'div-' + projectIndex}
                   className="mx-10 my-5 flex min-w-[300px] snap-center flex-col items-center sm:min-w-[400px] lg:my-40 lg:snap-start lg:last:mb-80" // gap between desktop images and on last
                 >
                   <h1 className="text-2xl lg:hidden">{project.title}</h1>
