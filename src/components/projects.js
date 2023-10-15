@@ -10,8 +10,7 @@ export default function Projects() {
   const [imageIndex, setImageIndex] = useState(0);
   const scrollableDivRef = useRef();
 
-  const onLinkClick = (imageIndex) => {
-    setImageIndex(imageIndex);
+  const setIndexToImageClicked = (imageIndex) => {
     scrollableDivRef.current.scrollTop = imageIndex * SCROLLOFFSET;
   };
 
@@ -46,7 +45,7 @@ export default function Projects() {
         >
           <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
-              <button key={'project-link-' + projectIndex} onClick={() => onLinkClick(projectIndex)}>
+              <button key={'project-link-' + projectIndex} onClick={() => setIndexToImageClicked(projectIndex)}>
                 <LiBig
                   key={'li' + projectIndex}
                   text={project.title}
