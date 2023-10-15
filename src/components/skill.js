@@ -3,7 +3,7 @@ import Title from './utils/title';
 
 export default function Skill() {
   return (
-    <div className="mb-12 flex w-screen flex-col items-center bg-dark text-cyan">
+    <div className="mb-12 flex min-h-screen w-screen flex-col items-center bg-dark text-cyan">
       <div className="mb-12 w-[85%] rounded-md bg-black p-3 lg:w-[70%]">
         <div className="flex flex-col items-center">
           <div>

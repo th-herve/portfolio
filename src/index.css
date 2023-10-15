@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-    scroll-padding-top: 250px;
-  }
-}
+/* @layer base { */
+/*   html { */
+/*     @apply scroll-smooth; */
+/*     scroll-padding-top: 250px; */
+/*   } */
+/* } */

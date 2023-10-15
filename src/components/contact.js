@@ -5,7 +5,7 @@ import Title from './utils/title';
 
 export default function Contact() {
   return (
-    <div className="mb-96 flex w-screen justify-center bg-gradient-to-r from-black to-gray">
+    <div className="mb-96 flex h-screen w-screen justify-center bg-gradient-to-r from-black to-gray">
       <form action="" method="" className="p-5  ">
         <Title titleText="Contact" />
         <div className="mb-10">

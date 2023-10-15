@@ -34,7 +34,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden py-5">
+    <div className="h-screen overflow-x-hidden py-5">
       <div className="px-20">
         <Title titleText="My projects" mb="0" />
       </div>
