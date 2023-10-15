@@ -6,16 +6,22 @@ import LiBig from './utils/liBig';
 import { useRef, useEffect, useState } from 'react';
 
 export default function Projects() {
+  const SCROLLOFFSET = 608;
   const [imageIndex, setImageIndex] = useState(0);
   const scrollableDivRef = useRef();
+
+  const onLinkClick = (imageIndex) => {
+    setImageIndex(imageIndex);
+    scrollableDivRef.current.scrollTop = imageIndex * SCROLLOFFSET;
+  };
 
   const updateImageIndexOnScroll = () => {
     // Calculate the scroll position of the scrolable div
     const scrollPosition = scrollableDivRef.current.scrollTop;
     console.log(scrollPosition);
 
-    // Calculate the image index based on scroll position, 608 is the number by which the scrolling position changes when switching image.
-    const newImageIndex = Math.floor(scrollPosition / 608);
+    // Calculate the image index based on scroll position
+    const newImageIndex = Math.floor(scrollPosition / SCROLLOFFSET);
 
     setImageIndex(newImageIndex);
   };
@@ -40,17 +46,13 @@ export default function Projects() {
         >
           <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
-              <a
-                href={'#single-project-container-' + projectIndex}
-                key={'project-link-' + projectIndex}
-                onClick={() => setImageIndex(projectIndex)}
-              >
+              <button key={'project-link-' + projectIndex} onClick={() => onLinkClick(projectIndex)}>
                 <LiBig
                   key={'li' + projectIndex}
                   text={project.title}
                   selected={projectIndex == imageIndex ? true : false}
                 />
-              </a>
+              </button>
             ))}
           </ul>
 
