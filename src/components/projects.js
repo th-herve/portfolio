@@ -3,10 +3,31 @@ import Title from './utils/title';
 import GithubLink from './utils/github_link';
 import LiBig from './utils/liBig';
 
-import { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 export default function Projects() {
   const [imageIndex, setImageIndex] = useState(0);
+  const scrollableDivRef = useRef();
+
+  const updateImageIndexOnScroll = () => {
+    // Calculate the scroll position of the scrolable div
+    const scrollPosition = scrollableDivRef.current.scrollTop;
+    console.log(scrollPosition);
+
+    // Calculate the image index based on scroll position, 608 is the number by which the scrolling position changes when switching image.
+    const newImageIndex = Math.floor(scrollPosition / 608);
+
+    setImageIndex(newImageIndex);
+  };
+  // Add a scroll event listener
+  useEffect(() => {
+    window.addEventListener('scroll', updateImageIndexOnScroll);
+
+    return () => {
+      window.removeEventListener('scroll', updateImageIndexOnScroll);
+    };
+  }, []);
+
   return (
     <div className="overflow-x-hidden py-5">
       <div className="px-20">
@@ -35,8 +56,10 @@ export default function Projects() {
 
           <div
             id="all-projects-container"
+            ref={scrollableDivRef}
             className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth text-white lg:snap-y "
             style={{ scrollbarWidth: 'none' }}
+            onScroll={updateImageIndexOnScroll}
           >
             <div className="flex px-[20%] lg:block lg:px-8">
               {projects.map((project, projectIndex) => (
