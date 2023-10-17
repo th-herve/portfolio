@@ -17,7 +17,6 @@ export default function Projects() {
   const updateImageIndexOnScroll = () => {
     // Calculate the scroll position of the scrolable div
     const scrollPosition = scrollableDivRef.current.scrollTop;
-    console.log(scrollPosition);
 
     // Calculate the image index based on scroll position
     const newImageIndex = Math.floor(scrollPosition / SCROLLOFFSET);

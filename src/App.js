@@ -11,6 +11,7 @@ const introText =
   "Je suis un développeur junior en quête d'un stage, animé par une passion pour le développement informatique. Je maîtrise déjà plusieurs technologies, et je suis prêt à mettre en pratique mes compétences pour enrichir votre équipe.";
 
 export default function App() {
+  console.log(__dirname);
   useEffect(() => {
     document.title = 'Portfolio';
   }, []);

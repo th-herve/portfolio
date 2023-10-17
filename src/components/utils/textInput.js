@@ -1,7 +1,4 @@
 export default function Input({ id, placeholder, name, type = 'text', hasLabel = false, labelText = '' }) {
-  if (hasLabel) {
-    console.log('lable');
-  }
   return (
     <>
       {hasLabel ? (
