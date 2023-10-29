@@ -95,6 +95,8 @@ export default function Projects() {
                   </div>
                 </div>
               ))}
+              {/* empty div used to add a marge after the last picture, fix the last picture being pushed on chrome (the lg:last:mb-80 does not work on chrome for some reason) */}
+              <div className="h-[100px]"></div>{' '}
             </div>
           </div>
         </div>
