@@ -89,7 +89,7 @@ export default function Projects() {
                       alt={project.title}
                     />
                   </div>
-                  <div className="mt-2 flex items-center">
+                  <div className="mt-2 flex max-w-[700px] gap-3">
                     <p className="text-start">{project.description}</p>
                     <GithubLink href={project.githubLink} />
                   </div>
