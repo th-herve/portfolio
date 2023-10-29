@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const links = ['Home', 'Projects', 'Cv', 'Skills', 'Contact'];
+  const links = ['Home', 'Projects', 'Skills', 'Contact'];
 
   return (
     <>

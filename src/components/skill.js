@@ -14,7 +14,7 @@ export default function Skill() {
             <Title titleText="Skills" />
             {Object.keys(skills).map((category) => (
               <div id="category-container" key={category} className="mb-10">
-                <h3 id="category-title" className="mb-6 text-2xl">
+                <h3 id="category-title" className="mb-5 text-2xl">
                   {category}
                 </h3>
 
