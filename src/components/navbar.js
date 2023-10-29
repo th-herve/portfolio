@@ -3,6 +3,7 @@ import { FaCode, FaXmark } from 'react-icons/fa6';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import { useState } from 'react';
+import GithubLink from './utils/github_link.js';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <div className="">Fr</div>
+      <GithubLink href="https://github.com/th-herve/" />
     </nav>
   );
 }
