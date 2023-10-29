@@ -8,7 +8,7 @@ import React, { useEffect } from 'react';
 const fullName = 'Thibault Hervé';
 const jobTitle = 'Développeur Junior';
 const introText =
-  'I am a junior developer on the lookout for an internship, driven by my genuine passion for computer programming. I have gained proficiency in several technologies and am eager to apply my skills to collaborate with and contribute to your team.';
+  'I am a junior developer on the lookout for an internship, driven by a genuine passion for programming. I have gained proficiency in several technologies and am eager to apply my skills to contribute to your team.';
 
 export default function App() {
   useEffect(() => {
