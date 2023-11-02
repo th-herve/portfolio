@@ -30,7 +30,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <GithubLink href="https://github.com/th-herve/" />
+      <GithubLink href="https://github.com/th-herve/" size="40px" />
     </nav>
   );
 }
