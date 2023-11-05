@@ -6,7 +6,7 @@ import Projects from './components/projects';
 import React, { useEffect } from 'react';
 
 const fullName = 'Thibault Hervé';
-const jobTitle = 'Développeur Junior';
+const jobTitle = 'Junior developer';
 const introText =
   'I am a junior developer on the lookout for an internship, driven by a genuine passion for programming. I have gained proficiency in several technologies and am eager to apply my skills to contribute to your team.';
 
