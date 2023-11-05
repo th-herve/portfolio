@@ -14,7 +14,7 @@ export const projects = [
     image: cyclingImg,
     description:
       'My first programming project, a straightforward web application that presents professional cycling races scheduled in a calendar format. Built using Flask for the backend and sport radar api to retrieve the data.',
-    link: 'cycling.th-herve.fr',
+    link: 'https://cycling.th-herve.fr',
     githubLink: 'https://github.com/th-herve/Cycling-calendar',
   },
   // {
