@@ -1,16 +1,26 @@
 // Reactive navbar with hamburger menu on mobile and normal navbar on desktop
+import { useState, useRef } from 'react';
+import i18n from '../i18n';
+
 import Link from './utils/link.js';
 import { FaCode, FaXmark } from 'react-icons/fa6';
 import { GiHamburgerMenu } from 'react-icons/gi';
-
-import { useState } from 'react';
 import GithubLink from './utils/github_link.js';
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const btnRef = useRef(null);
 
   // list of navigations links
   const links = ['Home', 'Projects', 'Skills', 'Contact'];
+
+  const changeLanguage = () => {
+    const currentLanguage = i18n.language;
+    const newLanguage = currentLanguage == 'en' ? 'fr' : 'en';
+    btnRef.current.innerHTML = newLanguage;
+
+    i18n.changeLanguage(newLanguage);
+  };
 
   return (
     <nav className="sticky top-0 flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
@@ -36,7 +46,14 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <GithubLink href="https://github.com/th-herve/" size="40px" />
+      <div className="items flex items-center gap-4">
+        <div id="language-switcher">
+          <button ref={btnRef} onClick={changeLanguage}>
+            fr
+          </button>
+        </div>
+        <GithubLink href="https://github.com/th-herve/" size="40px" />
+      </div>
     </nav>
   );
 }

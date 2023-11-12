@@ -5,11 +5,6 @@ import Contact from './components/contact';
 import Projects from './components/projects';
 import React, { useEffect } from 'react';
 
-const fullName = 'Thibault Hervé';
-const jobTitle = 'Junior developer';
-const introText =
-  'I am a junior developer on the lookout for an internship, driven by a genuine passion for programming. I have gained proficiency in several technologies and am eager to apply my skills to contribute to your team.';
-
 export default function App() {
   useEffect(() => {
     document.title = 'Portfolio';
@@ -17,9 +12,10 @@ export default function App() {
   return (
     <div className="bg-dark">
       <Navbar />
+
       <main className="flex h-screen snap-y snap-mandatory flex-col items-center overflow-y-scroll">
         <section id="home" className="flex snap-start justify-center">
-          <About fullName={fullName} jobTitle={jobTitle} description={introText} />
+          <About />
         </section>
 
         <section id="projects" className="mb-10 w-screen snap-start bg-gray lg:h-[calc(100vh-2rem)]">
