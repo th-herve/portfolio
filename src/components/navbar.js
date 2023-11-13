@@ -1,5 +1,5 @@
 // Reactive navbar with hamburger menu on mobile and normal navbar on desktop
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import i18n from '../i18n';
 
 import Link from './utils/link.js';
@@ -17,10 +17,21 @@ export default function Navbar() {
   const changeLanguage = () => {
     const currentLanguage = i18n.language;
     const newLanguage = currentLanguage == 'en' ? 'fr' : 'en';
-    btnRef.current.innerHTML = newLanguage;
 
     i18n.changeLanguage(newLanguage);
   };
+
+  useEffect(() => {
+    const handleLanguageChange = () => {
+      btnRef.current.innerHTML = i18n.language == 'en' ? 'fr' : 'en';
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, []);
 
   return (
     <nav className="sticky top-0 flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
