@@ -5,15 +5,20 @@ export const projects = [
   {
     title: 'My portfolio',
     image: portfolioImg,
-    description: 'Personal portfolio built using tailwind css and react.',
+    description: {
+      en: 'Personal portfolio built using tailwind css and react.',
+      fr: 'Portfolio personnel construit avec Tailwind CSS et React.',
+    },
     link: '',
     githubLink: 'https://github.com/th-herve/portfolio',
   },
   {
     title: 'Cycling calendar',
     image: cyclingImg,
-    description:
-      'My first programming project, a straightforward web application that presents professional cycling races scheduled in a calendar format. Built using Flask for the backend and sport radar api to retrieve the data.',
+    description: {
+      en: 'My first programming project, a straightforward web application that presents professional cycling races scheduled in a calendar format. Built using Flask for the backend and Sport Radar API to retrieve the data.',
+      fr: "Mon premier projet de programmation, une application web simple qui présente les courses cyclistes professionnelles prévues sous forme de calendrier. Construit avec Flask pour le backend et l'API Sport Radar pour récupérer les données.",
+    },
     link: 'https://cycling.th-herve.fr',
     githubLink: 'https://github.com/th-herve/Cycling-calendar',
   },

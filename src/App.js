@@ -14,7 +14,7 @@ export default function App() {
       <Navbar />
 
       <main className="flex h-screen snap-y snap-mandatory flex-col items-center overflow-y-scroll">
-        <section id="home" className="flex snap-start justify-center">
+        <section id="about" className="flex snap-start justify-center">
           <About />
         </section>
 

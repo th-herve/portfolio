@@ -1,4 +1,8 @@
 import { projects } from '../data/data_projects';
+
+// import { useTranslation } from 'react-i18next';
+import i18n from '../i18n';
+
 import Title from './utils/title';
 import GithubLink from './utils/github_link';
 import LiBig from './utils/liBig';
@@ -13,6 +17,9 @@ const SCROLL_OFFSET = 160;
 export default function Projects() {
   const [imageIndex, setImageIndex] = useState(0);
   const scrollableDivRef = useRef();
+  const descriptionRef = useRef({});
+
+  // const { t } = useTranslation();
 
   function getScrollItemHeight() {
     const scrollItemHeight = document.getElementById('single-project-container-0').offsetHeight;
@@ -42,6 +49,21 @@ export default function Projects() {
 
     return () => {
       window.removeEventListener('scroll', updateImageIndexOnScroll);
+    };
+  }, []);
+
+  const updateProjectDescription = () => {
+    projects.map((project, i) => {
+      const projectDescElem = descriptionRef.current[i];
+      projectDescElem.innerHTML = project.description[i18n.language];
+    });
+  };
+
+  useEffect(() => {
+    i18n.on('languageChanged', updateProjectDescription);
+
+    return () => {
+      i18n.off('languageChanged', updateProjectDescription);
     };
   }, []);
 
@@ -90,7 +112,9 @@ export default function Projects() {
                     />
                   </div>
                   <div className="mt-2 flex max-w-[700px] gap-3">
-                    <p className="text-start">{project.description}</p>
+                    <p ref={(elem) => (descriptionRef.current[projectIndex] = elem)} className="text-start">
+                      {project.description[i18n.language]}
+                    </p>
                     <GithubLink href={project.githubLink} />
                   </div>
                 </div>

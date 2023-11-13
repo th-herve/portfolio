@@ -1,21 +1,35 @@
 {
   "en": {
     "translation": {
-      "Welcome to React": "Welcome to React and react-i18next",
-      "hello": "Hello,",
-      "IAm": "I am ",
-      "jobTitle": "Junior developer",
-      "description": "I am a junior developer on the lookout for an internship, driven by a genuine passion for programming. I have gained proficiency in several technologies and am eager to apply my skills to contribute to your team."
+      "about": {
+        "hello": "Hello,",
+        "IAm": "I am ",
+        "jobTitle": "Junior developer",
+        "description": "I am a junior developer on the lookout for an internship, driven by a genuine passion for programming. I have gained proficiency in several technologies and am eager to apply my skills to contribute to your team."
+      },
+      "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+      }
     }
   },
 
   "fr": {
     "translation": {
-      "Welcome to React": "Bienvenue à React et react-i18next",
-      "hello": "Salut,",
-      "IAm": "Je suis ",
-      "jobTitle": "Développeur junior",
-      "description": "Développeur en formation BTS SIO, passionné par le code et autodidacte, je recherche un stage pour concrétiser ma passion."
+      "about": {
+        "hello": "Hey,",
+        "IAm": "Je suis ",
+        "jobTitle": "Développeur junior",
+        "description": "Développeur en formation BTS SIO, passionné par le code et autodidacte, je recherche un stage pour concrétiser ma passion."
+      },
+      "nav": {
+        "about": "À propos",
+        "projects": "Projets",
+        "skills": "Technos",
+        "contact": "Contact"
+      }
     }
   }
 }
