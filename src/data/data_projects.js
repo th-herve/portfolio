@@ -3,7 +3,10 @@ import cyclingImg from './projects_image/cycling.png';
 
 export const projects = [
   {
-    title: 'My portfolio',
+    title: {
+      en: 'My portfolio',
+      fr: 'Mon portfolio',
+    },
     image: portfolioImg,
     description: {
       en: 'Personal portfolio built using tailwind css and react.',
@@ -13,7 +16,10 @@ export const projects = [
     githubLink: 'https://github.com/th-herve/portfolio',
   },
   {
-    title: 'Cycling calendar',
+    title: {
+      en: 'Cycling calendar',
+      fr: 'Calendrier cyclistes',
+    },
     image: cyclingImg,
     description: {
       en: 'My first programming project, a straightforward web application that presents professional cycling races scheduled in a calendar format. Built using Flask for the backend and Sport Radar API to retrieve the data.',

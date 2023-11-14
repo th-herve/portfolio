@@ -12,6 +12,9 @@
         "projects": "Projects",
         "skills": "Skills",
         "contact": "Contact"
+      },
+      "projects": {
+        "title": "My projects"
       }
     }
   },
@@ -29,6 +32,9 @@
         "projects": "Projets",
         "skills": "Technos",
         "contact": "Contact"
+      },
+      "projects": {
+        "title": "Mes projets"
       }
     }
   }
