@@ -8,8 +8,9 @@ export default function Input({ id, placeholder, name, type = 'text', hasLabel =
       ) : (
         ''
       )}
+
       <input
-        className="h-10 w-[100%] rounded-md p-3 font-bold placeholder:text-lightGray focus:border-2 focus:border-cyan focus:outline-none focus:placeholder:text-white"
+        className="h-10 w-[100%] rounded-md border-2 border-white p-3 font-bold placeholder:text-lightGray focus:border-cyan focus:outline-none focus:placeholder:text-white"
         type={type}
         id={id}
         placeholder={placeholder}

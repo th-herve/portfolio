@@ -13,7 +13,7 @@ export default function Contact() {
         <Title titleText={t('contact.title')} />
         <div className="mb-10">
           <div className="flex gap-3">
-            <div>
+            <div className="flex-1">
               <Input
                 id="firstName"
                 placeholder={t('contact.firstNamePlaceHolder')}
@@ -22,7 +22,7 @@ export default function Contact() {
                 labelText={t('contact.firstName')}
               />
             </div>
-            <div>
+            <div className="flex-1">
               <Input
                 id="lastName"
                 placeholder={t('contact.lastNamePlaceHolder')}
@@ -32,6 +32,7 @@ export default function Contact() {
               />
             </div>
           </div>
+
           <Input
             id="email"
             placeholder={t('contact.emailPlaceHolder')}
@@ -47,7 +48,7 @@ export default function Contact() {
             id="message"
             name="message"
             rows="10"
-            className="h-20 w-[100%] rounded-md bg-white p-3 font-bold placeholder:text-lightGray focus:border-2 focus:border-cyan focus:outline-none focus:placeholder:text-white"
+            className="h-20 w-full rounded-md border-2 border-white bg-white p-3 font-bold placeholder:text-lightGray focus:border-cyan focus:outline-none focus:placeholder:text-white"
           ></textarea>
 
           <div className="m-3 flex justify-center">
