@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 export default function SkillBox({ IconComponent, skillName, level, size = '4rem' }) {
   const [isShown, setIsShown] = useState(false);
+
+  // set the mastery % of the skills when hovered
   const levelMeterWidth = { width: level };
 
   return (

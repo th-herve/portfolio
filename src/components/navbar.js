@@ -42,7 +42,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
+    <nav className="sticky top-0 z-[100] flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
       <div className="flex items-center gap-3 text-2xl font-bold ">
         {/* button that toggle the hamburger menu, display a X if open or the hamberger icon if closed, hidden on desktop */}
         <button onClick={() => setIsNavOpen(!isNavOpen)} className="text-cyan md:hidden">
