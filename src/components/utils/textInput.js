@@ -26,6 +26,7 @@ export default function Input({
         name={name}
         value={value}
         onChange={onChange}
+        required
       ></input>
     </>
   );

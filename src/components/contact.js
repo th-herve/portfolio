@@ -22,7 +22,6 @@ export default function Contact() {
   };
 
   const submitForm = async (formData) => {
-    console.log(JSON.stringify(formData));
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
