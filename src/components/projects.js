@@ -27,56 +27,49 @@ export default function Projects() {
 
   const { t } = useTranslation();
 
-  function getScrollItemHeight() {
-    const scrollItemHeight = document.getElementById('single-project-container-0').offsetHeight;
-    return scrollItemHeight + SCROLL_OFFSET;
-  }
+  // module with all the scroll related function
+  const scroll = (() => {
+    function getScrollItemHeight() {
+      const scrollItemHeight = document.getElementById('single-project-container-0').offsetHeight;
+      return scrollItemHeight + SCROLL_OFFSET;
+    }
 
-  // callback for the project links. Scroll to the corresponding image for the given index.
-  const setIndexToImageClicked = (imageIndex) => {
-    const itemHeight = getScrollItemHeight();
-    scrollableDivRef.current.scrollTop = imageIndex * itemHeight;
-  };
+    // callback for the project links. Scroll to the corresponding image for the given index.
+    const setIndexToImageClicked = (imageIndex) => {
+      const itemHeight = getScrollItemHeight();
+      scrollableDivRef.current.scrollTop = imageIndex * itemHeight;
+    };
 
-  const updateImageIndexOnScroll = () => {
-    const itemHeight = getScrollItemHeight();
+    const updateImageIndexOnScroll = () => {
+      const itemHeight = getScrollItemHeight();
 
-    // Calculate the scroll position of the scrolable div
-    const scrollPosition = scrollableDivRef.current.scrollTop;
+      // Calculate the scroll position of the scrolable div
+      const scrollPosition = scrollableDivRef.current.scrollTop;
 
-    // Calculate the image index based on scroll position
-    const newImageIndex = Math.floor(scrollPosition / itemHeight);
+      // Calculate the image index based on scroll position
+      const newImageIndex = Math.floor(scrollPosition / itemHeight);
 
-    setImageIndex(newImageIndex);
-  };
-  // Add a scroll event listener
+      setImageIndex(newImageIndex);
+    };
+
+    return {
+      setIndexToImageClicked,
+      updateImageIndexOnScroll,
+    };
+  })();
+
+  // Update projects text on language change. Note: not 100% sure if the i18n.language should be included in the dependency array(it works without it).
   useEffect(() => {
-    window.addEventListener('scroll', updateImageIndexOnScroll);
+    projects.map((project, i) => {
+      const projectDescElem = descriptionRef.current[i];
+      const projectTitleElem = titleRef.current[i];
+      const projectsLinksElem = projectsLinksRef.current[i];
 
-    return () => {
-      window.removeEventListener('scroll', updateImageIndexOnScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const updateProjectLanguage = () => {
-      projects.map((project, i) => {
-        const projectDescElem = descriptionRef.current[i];
-        const projectTitleElem = titleRef.current[i];
-        const projectsLinksElem = projectsLinksRef.current[i];
-
-        projectTitleElem.innerHTML = project.title[i18n.language];
-        projectDescElem.innerHTML = project.description[i18n.language];
-        projectsLinksElem.innerHTML = project.title[i18n.language];
-      });
-    };
-
-    i18n.on('languageChanged', updateProjectLanguage);
-
-    return () => {
-      i18n.off('languageChanged', updateProjectLanguage);
-    };
-  }, []);
+      projectTitleElem.innerHTML = project.title[i18n.language];
+      projectDescElem.innerHTML = project.description[i18n.language];
+      projectsLinksElem.innerHTML = project.title[i18n.language];
+    });
+  }, [i18n.language]);
 
   return (
     <div className="h-screen overflow-x-hidden py-5">
@@ -88,7 +81,7 @@ export default function Projects() {
           {/* list of links to the differents projects, only visible on desktop */}
           <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
-              <button key={'project-link-' + projectIndex} onClick={() => setIndexToImageClicked(projectIndex)}>
+              <button key={'project-link-' + projectIndex} onClick={() => scroll.setIndexToImageClicked(projectIndex)}>
                 <LiBig
                   ref={(elem) => (projectsLinksRef.current[projectIndex] = elem)}
                   key={'li' + projectIndex}
@@ -104,7 +97,7 @@ export default function Projects() {
             ref={scrollableDivRef}
             className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth text-white lg:snap-y"
             style={{ scrollbarWidth: 'none' }}
-            onScroll={updateImageIndexOnScroll}
+            onScroll={scroll.updateImageIndexOnScroll}
           >
             <div className="flex px-[20%] lg:block lg:px-8">
               {projects.map((project, projectIndex) => (
