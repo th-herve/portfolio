@@ -13,6 +13,7 @@ import {
 import { PiFileSqlDuotone } from 'react-icons/pi';
 
 export const skills = (() => {
+  // The categories values are used as key in the translation.json file, if updating a value, it must be reflected in the translation file.
   const categories = {
     language: 'Programming Languages',
     framework: 'Frameworks',

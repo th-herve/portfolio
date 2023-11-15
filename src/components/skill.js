@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
+
 import { skills } from '../data/data_skills';
 import SkillBox from './utils/skillBox';
 import Title from './utils/title';
 
-export default function Skill() {
+export default function Skills() {
+  const { t } = useTranslation();
   return (
     <div
       id="main-section"
@@ -11,11 +14,11 @@ export default function Skill() {
       <div id="black-box" className="mb-12 w-[85%] rounded-md bg-black px-3 py-10 lg:w-[70%]">
         <div className="flex flex-col items-center">
           <div>
-            <Title titleText="Skills" />
+            <Title titleText={t('skills.title')} />
             {Object.keys(skills).map((category) => (
               <div id="category-container" key={category} className="mb-10">
                 <h3 id="category-title" className="mb-5 text-2xl">
-                  {category}
+                  {t('skills.' + category)}
                 </h3>
 
                 <div id="category-skills" className="flex flex-wrap gap-3 lg:gap-10">
