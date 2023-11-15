@@ -22,6 +22,17 @@
         "Programming Languages": "Programming Languages",
         "Frameworks": "Frameworks",
         "Others": "Others"
+      },
+      "contact": {
+        "title": "Contact",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "message": "Your message",
+        "firstNamePlaceHolder": "First name",
+        "lastNamePlaceHolder": "Last name",
+        "emailPlaceHolder": "yourmail@mail.com",
+        "send": "Send"
       }
     }
   },
@@ -49,6 +60,17 @@
         "Programming Languages": "Langages de programmation",
         "Frameworks": "Frameworks",
         "Others": "Autres"
+      },
+      "contact": {
+        "title": "Contact",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email",
+        "message": "Votre message",
+        "firstNamePlaceHolder": "Prénom",
+        "lastNamePlaceHolder": "Nom",
+        "emailPlaceHolder": "votremail@mail.com",
+        "send": "Envoyer"
       }
     }
   }
