@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-black to-gray">
+    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-bg1 to-gray dark:from-dark_bg1 dark:to-dark_gray">
       <form onSubmit={handleSubmit} className="p-5  ">
         <Title titleText={t('contact.title')} />
         <div className="mb-10">
@@ -78,21 +78,21 @@ export default function Contact() {
             onChange={handleChange}
           />
 
-          <label className="font-bold text-cyan" htmlFor="message">
+          <label className="font-bold text-cyan dark:text-dark_cyan" htmlFor="message">
             {t('contact.message')}
           </label>
           <textarea
             id="message"
             name="message"
             rows="10"
-            className="h-20 w-full rounded-md border-2 border-white bg-white p-3 font-bold placeholder:text-lightGray focus:border-cyan focus:outline-none focus:placeholder:text-white"
+            className="h-20 w-full rounded-md border-2 border-text  p-3 font-bold placeholder:text-lightGray focus:border-cyan focus:outline-none focus:placeholder:text-text dark:border-dark_text dark:bg-dark_text dark:placeholder:text-dark_lightGray dark:focus:border-dark_cyan dark:focus:placeholder:text-dark_text"
             value={inputs.message || ''}
             onChange={handleChange}
           ></textarea>
 
           <div className="m-3 flex justify-center">
             <button
-              className="rounded-md border-2 border-cyan bg-black px-9 py-3 font-bold text-cyan transition ease-in-out hover:shadow-md hover:shadow-cyan hover:transition-all "
+              className="rounded-md border-2 border-cyan bg-bg1 px-9 py-3 font-bold text-cyan transition ease-in-out hover:shadow-md hover:shadow-cyan hover:transition-all dark:border-dark_cyan dark:bg-dark_bg1 dark:text-dark_cyan dark:hover:shadow-dark_cyan "
               type="submit"
             >
               {t('contact.send')}

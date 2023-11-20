@@ -9,9 +9,9 @@ export default function Skills() {
   return (
     <div
       id="main-section"
-      className="flex min-h-screen w-screen flex-col items-center justify-center bg-dark text-cyan"
+      className="flex min-h-screen w-screen flex-col items-center justify-center bg-bg1 text-cyan dark:bg-dark_bg2 dark:text-dark_cyan"
     >
-      <div id="black-box" className="mb-12 w-[85%] rounded-md bg-black px-3 py-10 lg:w-[70%]">
+      <div id="bg1-box" className="mb-12 w-[85%] rounded-md bg-bg2 px-3 py-10 dark:bg-dark_bg1 lg:w-[70%]">
         <div className="flex flex-col items-center">
           <div>
             <Title titleText={t('skills.title')} />

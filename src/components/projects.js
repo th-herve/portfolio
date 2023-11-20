@@ -79,7 +79,7 @@ export default function Projects() {
       <div id="flex-wraper-lg" className="lg:ml-[10%] lg:flex lg:h-screen lg:items-center lg:justify-items-start">
         <div className="lg:flex lg:max-h-[60%] lg:justify-center lg:gap-28 lg:overflow-y-hidden">
           {/* list of links to the differents projects, only visible on desktop */}
-          <ul id="titlesList" className="hidden pt-0 text-2xl text-white lg:flex lg:flex-col">
+          <ul id="titlesList" className="hidden pt-0 text-2xl text-text dark:text-dark_text lg:flex lg:flex-col">
             {projects.map((project, projectIndex) => (
               <button key={'project-link-' + projectIndex} onClick={() => scroll.setIndexToImageClicked(projectIndex)}>
                 <LiBig
@@ -95,7 +95,7 @@ export default function Projects() {
           <div
             id="all-projects-container"
             ref={scrollableDivRef}
-            className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth text-white lg:snap-y"
+            className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth text-text dark:text-dark_text lg:snap-y"
             style={{ scrollbarWidth: 'none' }}
             onScroll={scroll.updateImageIndexOnScroll}
           >
@@ -111,7 +111,7 @@ export default function Projects() {
                   </h1>
                   <div id="imageContainer" className="flex h-[200px] items-center sm:h-[300px] lg:h-[40vh]">
                     <img
-                      className="max-h-[100%] max-w-xs rounded-md shadow-md shadow-dark sm:max-w-md lg:max-w-[100%]"
+                      className="dark:dark_bg2 max-h-[100%] max-w-xs rounded-md shadow-md shadow-bg2 dark:shadow-dark_bg2 sm:max-w-md lg:max-w-[100%]"
                       src={project.image}
                       alt={project.title[i18n.language]}
                     />

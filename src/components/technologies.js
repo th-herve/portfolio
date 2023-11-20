@@ -5,9 +5,9 @@ export default function Skill() {
     <div
       className="
                     bg-[url('https://images.unsplash.com/photo-1448067686092-1f4f2070baae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] 
-                    p-8 text-cyan"
+                    p-8 text-cyan dark:text-dark_cyan"
     >
-      <div className="rounded-md bg-black p-3">
+      <div className="rounded-md bg-bg1 p-3 dark:bg-dark_bg1">
         <FaReact size={100} />
       </div>
     </div>

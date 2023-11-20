@@ -42,14 +42,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-[100] flex items-center justify-between bg-black  px-8 py-3 text-2xl text-white">
+    <nav className="sticky top-0 z-[100] flex items-center justify-between bg-bg1 px-8  py-3 text-2xl text-text shadow-md dark:bg-dark_bg1 dark:text-dark_text">
       <div className="flex items-center gap-3 text-2xl font-bold ">
         {/* button that toggle the hamburger menu, display a X if open or the hamberger icon if closed, hidden on desktop */}
-        <button onClick={() => setIsNavOpen(!isNavOpen)} className="text-cyan md:hidden">
+        <button onClick={() => setIsNavOpen(!isNavOpen)} className="text-cyan dark:text-dark_cyan md:hidden">
           {isNavOpen ? <FaXmark size="2rem" /> : <GiHamburgerMenu size="2rem" />}
         </button>
         {/* </> icon */}
-        <FaCode size="2rem" className="text-cyan" />
+        <FaCode size="2rem" className="text-cyan dark:text-dark_cyan" />
       </div>
       <h1 className="ml-3  hidden lg:block">Portfolio</h1>
 
@@ -57,7 +57,7 @@ export default function Navbar() {
       <ul
         id="nav-links"
         className={`${!isNavOpen ? 'hidden' : ''}
-            absolute right-0 top-14 h-screen w-screen text-center text-2xl text-white backdrop-blur-xl md:static md:flex md:h-auto md:justify-center`}
+            absolute right-0 top-14 h-screen w-screen text-center text-2xl text-text backdrop-blur-xl dark:text-dark_text md:static md:flex md:h-auto md:justify-center`}
       >
         {/* Map the links object to extract the text+href */}
         {Object.keys(links).map((key) => (

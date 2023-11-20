@@ -10,7 +10,7 @@ export default function App() {
     document.title = 'Portfolio';
   }, []);
   return (
-    <div className="bg-dark">
+    <div className="bg-bg2 dark:bg-dark_bg2">
       <Navbar />
 
       <main className="flex h-screen snap-y snap-mandatory flex-col items-center overflow-y-scroll">
@@ -18,7 +18,7 @@ export default function App() {
           <About />
         </section>
 
-        <section id="projects" className="mb-10 w-screen snap-start bg-gray lg:h-[calc(100vh-2rem)]">
+        <section id="projects" className="mb-10 w-screen snap-start bg-gray dark:bg-dark_gray lg:h-[calc(100vh-2rem)]">
           <Projects />
         </section>
 
