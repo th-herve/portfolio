@@ -6,7 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import './i18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.getElementById('root').classList.add('dark');
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.getElementById('root').classList.add('dark');
+} else {
+  document.getElementById('root').classList.remove('dark');
+}
+
 root.render(
   <React.StrictMode>
     <App />

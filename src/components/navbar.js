@@ -9,11 +9,13 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdLightMode } from 'react-icons/md';
 import GithubLink from './utils/github_link.js';
 
+const isSystemThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 export default function Navbar() {
   const { t } = useTranslation();
 
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(isSystemThemeDark);
   const btnRef = useRef(null);
 
   // list of navigations links, the key is used as the hrefvalue and the value is the text displayed
