@@ -4,14 +4,16 @@ import i18n from '../i18n';
 import { useTranslation } from 'react-i18next';
 
 import Link from './utils/link.js';
-import { FaCode, FaXmark } from 'react-icons/fa6';
+import { FaCode, FaXmark, FaMoon } from 'react-icons/fa6';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdLightMode } from 'react-icons/md';
 import GithubLink from './utils/github_link.js';
 
 export default function Navbar() {
   const { t } = useTranslation();
 
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
   const btnRef = useRef(null);
 
   // list of navigations links, the key is used as the hrefvalue and the value is the text displayed
@@ -41,6 +43,11 @@ export default function Navbar() {
     };
   }, []);
 
+  const toggleTheme = () => {
+    document.getElementById('root').classList.toggle('dark');
+    setDarkTheme(!darkTheme);
+  };
+
   return (
     <nav className="sticky top-0 z-[100] flex items-center justify-between bg-bg1 px-8  py-3 text-2xl text-text shadow-md dark:bg-dark_bg1 dark:text-dark_text">
       <div className="flex items-center gap-3 text-2xl font-bold ">
@@ -67,10 +74,15 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="items flex items-center gap-4">
+      <div id="right-part" className="items flex items-center gap-4">
         <div id="language-switcher">
-          <button ref={btnRef} onClick={changeLanguage}>
+          <button ref={btnRef} onClick={changeLanguage} className="hover:text-cyan dark:hover:text-dark_cyan">
             fr
+          </button>
+        </div>
+        <div id="theme-switcher">
+          <button onClick={toggleTheme} className="flex items-center  hover:text-cyan dark:hover:text-dark_cyan">
+            {darkTheme ? <MdLightMode /> : <FaMoon />}
           </button>
         </div>
         <GithubLink href="https://github.com/th-herve/" size="40px" />
