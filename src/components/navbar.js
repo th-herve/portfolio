@@ -49,6 +49,7 @@ export default function Navbar() {
     document.getElementById('root').classList.toggle('dark');
     setDarkTheme(!darkTheme);
   };
+  console.log(isNavOpen);
 
   return (
     <nav className="sticky top-0 z-[100] flex items-center justify-between bg-bg1 px-8  py-3 text-2xl text-text shadow-md dark:bg-dark_bg1 dark:text-dark_text">
@@ -71,7 +72,9 @@ export default function Navbar() {
         {/* Map the links object to extract the text+href */}
         {Object.keys(links).map((key) => (
           <li key={key} className="mb-12 mt-12 md:my-0">
-            <Link text={links[key]} href={'#' + key.toLowerCase()} />
+            <button tabIndex={-1} onClick={() => setIsNavOpen(false)}>
+              <Link text={links[key]} href={'#' + key.toLowerCase()} />
+            </button>
           </li>
         ))}
       </ul>
