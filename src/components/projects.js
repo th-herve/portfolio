@@ -72,7 +72,7 @@ export default function Projects() {
   }, [i18n.language]);
 
   return (
-    <div className="h-screen overflow-x-hidden py-5">
+    <div className="h-screen overflow-x-hidden py-5 lg:h-auto">
       <div className="px-20">
         <Title titleText={t('projects.title')} mb="0" />
       </div>
