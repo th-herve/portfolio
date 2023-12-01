@@ -49,7 +49,6 @@ export default function Navbar() {
     document.getElementById('root').classList.toggle('dark');
     setDarkTheme(!darkTheme);
   };
-  console.log(isNavOpen);
 
   return (
     <nav className="sticky top-0 z-[100] flex items-center justify-between bg-bg1 px-8  py-3 text-2xl text-text shadow-md dark:bg-dark_bg1 dark:text-dark_text">
