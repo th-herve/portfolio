@@ -7,7 +7,7 @@ import React, { useEffect } from 'react';
 
 export default function App() {
   useEffect(() => {
-    document.title = 'Portfolio';
+    document.title = 'th-herve';
   }, []);
   return (
     <div className="bg-bg2 dark:bg-dark_bg2">
@@ -33,9 +33,3 @@ export default function App() {
     </div>
   );
 }
-
-// <Navbar />
-// <About />
-// <Technologie />
-// <Project />
-// <Contact />
