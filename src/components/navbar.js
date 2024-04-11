@@ -81,7 +81,7 @@ export default function Navbar() {
       <div id="right-part" className="items flex items-center gap-4">
         <div id="language-switcher">
           <button ref={btnRef} onClick={changeLanguage} className="hover:text-cyan dark:hover:text-dark_cyan">
-            fr
+            en
           </button>
         </div>
         <div id="theme-switcher">
