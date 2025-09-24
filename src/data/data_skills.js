@@ -1,4 +1,4 @@
-import { FaReact, FaHtml5, FaCss3Alt, FaJava, FaPhp, FaSquareJs, FaPython, FaGitAlt, FaLinux } from 'react-icons/fa6';
+import { FaReact, FaCss3Alt, FaJava, FaPhp, FaSquareJs, FaPython, FaGitAlt, FaLinux, FaGolang, FaLaravel } from 'react-icons/fa6';
 import {
   SiGnubash,
   SiWebpack,
@@ -9,6 +9,9 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiC,
+  SiTypescript,
+  SiSpringboot,
+  SiNextdotjs,
 } from 'react-icons/si';
 import { PiFileSqlDuotone } from 'react-icons/pi';
 
@@ -23,38 +26,38 @@ export const skills = (() => {
   // The icon entry is a react component
   const skillsList = [
     {
-      name: 'HTML5',
+      name: 'Typescript',
       category: categories.language,
-      icon: FaHtml5,
+      icon: SiTypescript,
       show: true,
       level: '60%',
+    },
+    {
+      name: 'Javascript',
+      category: categories.language,
+      icon: FaSquareJs,
+      show: false,
+      level: '50%',
     },
     {
       name: 'C',
       category: categories.language,
       icon: SiC,
-      show: true,
+      show: false,
       level: '20%',
     },
     {
       name: 'Bootstrap',
       category: categories.framework,
       icon: SiBootstrap,
-      show: true,
+      show: false,
       level: '40%',
-    },
-    {
-      name: 'Tailwind',
-      category: categories.framework,
-      icon: SiTailwindcss,
-      show: true,
-      level: '60%',
     },
     {
       name: 'Flask',
       category: categories.framework,
       icon: SiFlask,
-      show: true,
+      show: false,
       level: '40%',
     },
     {
@@ -62,13 +65,41 @@ export const skills = (() => {
       category: categories.framework,
       icon: FaReact,
       show: true,
-      level: '50%',
+      level: '60%',
+    },
+    {
+      name: 'NextJs',
+      category: categories.framework,
+      icon: SiNextdotjs,
+      show: true,
+      level: '60%',
+    },
+    {
+      name: 'Laravel',
+      category: categories.framework,
+      icon: FaLaravel,
+      show: true,
+      level: '60%',
+    },
+    {
+      name: 'Spring boot',
+      category: categories.framework,
+      icon: SiSpringboot,
+      show: true,
+      level: '60%',
+    },
+    {
+      name: 'Tailwind',
+      category: categories.framework,
+      icon: SiTailwindcss,
+      show: false,
+      level: '60%',
     },
     {
       name: 'CSS3',
       category: categories.language,
       icon: FaCss3Alt,
-      show: true,
+      show: false,
       level: '60%',
     },
     {
@@ -76,28 +107,28 @@ export const skills = (() => {
       category: categories.language,
       icon: FaJava,
       show: true,
-      level: '40%',
+      level: '50%',
     },
     {
       name: 'PHP',
       category: categories.language,
       icon: FaPhp,
       show: true,
-      level: '30%',
-    },
-    {
-      name: 'Javascript',
-      category: categories.language,
-      icon: FaSquareJs,
-      show: true,
-      level: '60%',
+      level: '50%',
     },
     {
       name: 'Python',
       category: categories.language,
       icon: FaPython,
       show: true,
-      level: '60%',
+      level: '50%',
+    },
+    {
+      name: 'Go',
+      category: categories.language,
+      icon: FaGolang,
+      show: true,
+      level: '50%',
     },
     {
       name: 'Git',
@@ -145,7 +176,7 @@ export const skills = (() => {
       name: 'InDesign',
       category: categories.other,
       icon: SiAdobeindesign,
-      show: true,
+      show: false,
       level: '70%',
     },
     {
